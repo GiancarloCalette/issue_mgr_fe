@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}About Me{% endblock title %}
+
+{% block content %}
+<h1>About {{ about["first_name"] }} {{ about["last_name"] }}</h1>
+<P>
+    Hello, my name is {{ about["first_name"] }}, and my my hobbies are {{ about["hobbies"] }}
+</P>
+{% endblock content %}
