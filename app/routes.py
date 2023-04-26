@@ -26,5 +26,5 @@ def display_all_tasks():
     resp = requests.get(url)
     if resp.status_code == 200:
         task_data = resp.json()
-        return render_template("task_list.html", tasks=task_data)
+        return render_template("task_list.html", tasks=task_data["tasks"])
     return render_template("error.html", err_code=resp.status_code), resp.status_code
